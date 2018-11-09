@@ -19,7 +19,7 @@ public class DateFunctionTest {
     LocalDate sunday = LocalDate.of(2018, 10, 21);
     t.setSettleDate(friday);
 
-    DateFunction.setAdjustedSettleDate(t);
+    DateFunction.adjustedSettleDate(t);
     // Settle Date and Adjusted Date should not be same.
     Assert.assertFalse(friday.equals(t.getAdjustedSettleDate()));
 
@@ -35,7 +35,7 @@ public class DateFunctionTest {
     LocalDate friday = LocalDate.of(2018, 10, 19); // 19th Oct is Friday.
     t.setSettleDate(friday);
 
-    DateFunction.setAdjustedSettleDate(t);
+    DateFunction.adjustedSettleDate(t);
     Assert.assertTrue(t.getAdjustedSettleDate().equals(friday));
   }
 }
