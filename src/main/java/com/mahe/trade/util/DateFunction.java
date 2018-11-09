@@ -17,7 +17,7 @@ public class DateFunction {
     SPECIAL_CCY.put("SAR", DayOfWeek.SUNDAY);
   }
 
-  public static void adjustedSettleDate(final Trade trade) {
+  public static void setAdjustedSettleDate(final Trade trade) {
     LocalDate settleDate = trade.getSettleDate();
     DayOfWeek settleDay = settleDate.getDayOfWeek();
     int delta = 0;

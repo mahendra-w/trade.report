@@ -24,7 +24,7 @@ public class ReportGenerator {
     while ((t = queue.poll()) != null) {
       Pricer pricer = PricerFactory.getPricer(t);
       pricer.price(t);
-      DateFunction.adjustedSettleDate(t);
+      DateFunction.setAdjustedSettleDate(t);
       final Trade trade = t;
       reportsToGenerate.stream().forEach(report -> {
         report.addTrade(trade);
